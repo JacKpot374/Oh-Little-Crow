@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5ceo0rtsq6sx"
+path="res://.godot/imported/Whispers of the Wind ext v1.mp3-e8328e2b2f188a1619d92b4ab37d5280.mp3str"
+
+[deps]
+
+source_file="res://Musica/Whispers of the Wind ext v1.mp3"
+dest_files=["res://.godot/imported/Whispers of the Wind ext v1.mp3-e8328e2b2f188a1619d92b4ab37d5280.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
