@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://o1q2duo6vfk8"]
+
+[ext_resource type="PackedScene" uid="uid://cu1h2pg0500vy" path="res://Escenas/Personaje.tscn" id="1_rxbim"]
+[ext_resource type="PackedScene" uid="uid://dmn7ken2jado1" path="res://Escenas/CrearNiveles.tscn" id="2_ag2xw"]
+
+[node name="NIvel1" type="Node2D"]
+
+[node name="Personaje" parent="." instance=ExtResource("1_rxbim")]
+position = Vector2(187, 126)
+
+[node name="Piso" parent="." instance=ExtResource("2_ag2xw")]
+position = Vector2(-15, -25)

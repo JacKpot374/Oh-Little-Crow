@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Oh Little Crow"
+run/main_scene="uid://o1q2duo6vfk8"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

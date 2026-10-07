@@ -5,7 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbqex"]
 size = Vector2(1192, 66)
 
-[node name="Piso" type="RigidBody2D"]
+[node name="Piso" type="StaticBody2D"]
+position = Vector2(-6, 1)
+metadata/_edit_group_ = true
 
 [node name="Piso" type="Sprite2D" parent="."]
 position = Vector2(585, 657)
