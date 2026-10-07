@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmn7ken2jado1"]
+
+[ext_resource type="Texture2D" uid="uid://dqwhww6kd53qj" path="res://Fondos/Fondo10.png" id="1_tdhyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbqex"]
+size = Vector2(1192, 66)
+
+[node name="Piso" type="RigidBody2D"]
+
+[node name="Piso" type="Sprite2D" parent="."]
+position = Vector2(585, 657)
+scale = Vector2(4.64844, 0.465278)
+texture = ExtResource("1_tdhyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(583, 659)
+shape = SubResource("RectangleShape2D_cbqex")

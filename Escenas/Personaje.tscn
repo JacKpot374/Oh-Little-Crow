@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu1h2pg0500vy"]
+
+[ext_resource type="Texture2D" uid="uid://d12n4icphjgr7" path="res://Personaje/Bennet imagen.png" id="1_qg4o5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gco6"]
+radius = 14.0
+height = 52.0
+
+[node name="Personaje" type="CharacterBody2D"]
+
+[node name="Crow" type="Sprite2D" parent="."]
+position = Vector2(540, 246)
+texture = ExtResource("1_qg4o5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(535, 245)
+shape = SubResource("CapsuleShape2D_0gco6")
