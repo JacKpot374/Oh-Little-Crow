@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://whinim2h8858"]
+
+[ext_resource type="Script" uid="uid://cq80j7yntjpyo" path="res://Escenas/plataforma_movil.gd" id="1_mg2cu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkwax"]
+size = Vector2(307.5, 32)
+
+[node name="PlataformaMovil" type="AnimatableBody2D"]
+script = ExtResource("1_mg2cu")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 353.0
+offset_top = 526.0
+offset_right = 656.0
+offset_bottom = 555.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(504.25, 541)
+shape = SubResource("RectangleShape2D_lkwax")

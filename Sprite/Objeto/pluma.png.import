@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d12n4icphjgr7"
-path="res://.godot/imported/Bennet imagen.png-912bd30c6c905b16d913ab86f59f9602.ctex"
+uid="uid://cr0gf2rdgluro"
+path="res://.godot/imported/pluma.png-1b86529a98b0b3cfe1ffb3d68e11702e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Personaje/Bennet imagen.png"
-dest_files=["res://.godot/imported/Bennet imagen.png-912bd30c6c905b16d913ab86f59f9602.ctex"]
+source_file="res://Sprite/Objeto/pluma.png"
+dest_files=["res://.godot/imported/pluma.png-1b86529a98b0b3cfe1ffb3d68e11702e.ctex"]
 
 [params]
 

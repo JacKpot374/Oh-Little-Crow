@@ -9,7 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jump_count = 0 # Rastrea cuántos saltos llevamos en el aire
 
 # Referencia al nodo visual para poder voltearlo
-@onready var sprite = $Crow
+@onready var sprite = $Sprite2D
 
 func _physics_process(delta):
 	# 1. Aplicar Gravedad y reiniciar el contador de saltos al tocar el suelo
