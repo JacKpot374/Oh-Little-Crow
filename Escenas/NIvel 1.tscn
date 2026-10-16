@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://o1q2duo6vfk8"]
+[gd_scene load_steps=6 format=3 uid="uid://o1q2duo6vfk8"]
 
 [ext_resource type="PackedScene" uid="uid://cu1h2pg0500vy" path="res://Escenas/Personaje.tscn" id="1_rxbim"]
 [ext_resource type="PackedScene" uid="uid://dmn7ken2jado1" path="res://Escenas/CrearNiveles.tscn" id="2_ag2xw"]
 [ext_resource type="PackedScene" uid="uid://c27y5bns3fj3a" path="res://Escenas/Pluma.tscn" id="3_ag2xw"]
 [ext_resource type="PackedScene" uid="uid://whinim2h8858" path="res://Escenas/Plataforma Movil.tscn" id="4_787vp"]
+[ext_resource type="PackedScene" uid="uid://bo087bsdjp463" path="res://Escenas/Objeto Daño.tscn" id="5_ux005"]
 
 [node name="NIvel1" type="Node2D"]
 
-[node name="Personaje" parent="." instance=ExtResource("1_rxbim")]
+[node name="Personaje" parent="." node_paths=PackedStringArray("texto_vida") instance=ExtResource("1_rxbim")]
 position = Vector2(187, 126)
+texto_vida = NodePath("../CanvasLayer/Label")
 
 [node name="Piso" parent="." instance=ExtResource("2_ag2xw")]
 position = Vector2(-15, -25)
@@ -17,4 +19,13 @@ position = Vector2(-15, -25)
 position = Vector2(617, 111)
 
 [node name="PlataformaMovil" parent="." instance=ExtResource("4_787vp")]
-position = Vector2(158, -37)
+position = Vector2(217, -43)
+
+[node name="ObjetoDaño" parent="." instance=ExtResource("5_ux005")]
+position = Vector2(53, 305)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 152.0
+offset_bottom = 75.0

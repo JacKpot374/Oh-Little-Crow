@@ -4,12 +4,19 @@ extends CharacterBody2D
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
 @export var MAX_JUMPS = 2 # Límite de saltos permitidos
+@export var vida : int = 3
+@export var texto_vida: Label
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jump_count = 0 # Rastrea cuántos saltos llevamos en el aire
 
 # Referencia al nodo visual para poder voltearlo
 @onready var sprite = $Sprite2D
+
+func _ready():
+	# Muestra la vida inicial al arrancar el nivel
+	if texto_vida != null:
+		texto_vida.text = "Vidas: " + str(vida)
 
 func _physics_process(delta):
 	# 1. Aplicar Gravedad y reiniciar el contador de saltos al tocar el suelo
@@ -33,7 +40,7 @@ func _physics_process(delta):
 		
 		# Lógica para reflejar el personaje (Mirar izquierda o derecha)
 		if direction < 0:
-			sprite.flip_h = false  # Voltea hacia la izquierda
+			sprite.flip_h = false # Voltea hacia la izquierda
 		elif direction > 0:
 			sprite.flip_h = true # Lo mantiene hacia la derecha
 	else:
@@ -42,3 +49,21 @@ func _physics_process(delta):
 
 	# 4. Procesar físicas
 	move_and_slide()
+	
+# === SISTEMA DE VIDA DEL PERSONAJE ===
+
+func recibir_dano(cantidad):
+	vida -= cantidad
+	print("Auch! Vida actual: ", vida)
+	
+	if texto_vida != null:
+		texto_vida.text = "Vidas: " + str(vida)
+	
+	sprite.modulate = Color.RED
+	var tween = create_tween()
+	tween.tween_property(sprite, "modulate", Color.WHITE, 0.3)
+	# Esta condición ahora está correctamente dentro de la función (con doble tabulación)
+	if vida <= 0:
+		print("El personaje ha muerto")
+		queue_free()
+		

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo087bsdjp463"]
+
+[ext_resource type="Script" uid="uid://catiqf8htpbmc" path="res://Escenas/objeto_daño.gd" id="1_0f4h7"]
+[ext_resource type="Texture2D" uid="uid://c2vsg8ndak2od" path="res://Sprite/Objeto/flecha.png" id="1_hu5xm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0f4h7"]
+height = 20.0
+
+[node name="ObjetoDaño" type="Area2D"]
+script = ExtResource("1_0f4h7")
+metadata/_edit_group_ = true
+
+[node name="Flecha" type="Sprite2D" parent="."]
+position = Vector2(450, 277)
+texture = ExtResource("1_hu5xm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(450, 282)
+shape = SubResource("CapsuleShape2D_0f4h7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
