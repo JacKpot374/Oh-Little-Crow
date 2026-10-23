@@ -65,5 +65,6 @@ func recibir_dano(cantidad):
 	# Esta condición ahora está correctamente dentro de la función (con doble tabulación)
 	if vida <= 0:
 		print("El personaje ha muerto")
+		get_tree().change_scene_to_file("res://Escenas/Game over.tscn")
 		queue_free()
 		
